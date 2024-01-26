@@ -1,0 +1,43 @@
+[gd_scene load_steps=8 format=3 uid="uid://dgf2ij5x6mpn2"]
+
+[ext_resource type="Script" path="res://scripts/GameField.gd" id="1_23r46"]
+[ext_resource type="PackedScene" uid="uid://n2hfn6lt32l0" path="res://scenes/ScammerButton.tscn" id="2_6kpit"]
+[ext_resource type="Resource" uid="uid://d24pp5jac4tjx" path="res://resources/GameStateResource.tres" id="2_gcrpd"]
+[ext_resource type="Resource" uid="uid://cbrjerxa0sk2m" path="res://resources/BasicScammerResource.tres" id="3_6w0d1"]
+[ext_resource type="Script" path="res://scripts/money.gd" id="3_dsbqu"]
+[ext_resource type="Resource" uid="uid://betg0x8mdq584" path="res://resources/AdvancedScammerResource.tres" id="4_u5bnj"]
+[ext_resource type="Resource" uid="uid://didys7j0tt4b5" path="res://resources/EpicScammerSource.tres" id="5_3si18"]
+
+[node name="GameField" type="CanvasLayer"]
+script = ExtResource("1_23r46")
+game_state = ExtResource("2_gcrpd")
+
+[node name="MONER" type="Label" parent="."]
+offset_left = 7.0
+offset_right = 97.0
+offset_bottom = 23.0
+size_flags_horizontal = 0
+size_flags_vertical = 0
+text = "MONER"
+script = ExtResource("3_dsbqu")
+game_state = ExtResource("2_gcrpd")
+
+[node name="BasicScammer" parent="." instance=ExtResource("2_6kpit")]
+offset = Vector2(0, 25)
+transform = Transform2D(1, 0, 0, 1, 0, 25)
+scammer_data = ExtResource("3_6w0d1")
+game_state = ExtResource("2_gcrpd")
+
+[node name="AdvancedScammer" parent="." instance=ExtResource("2_6kpit")]
+offset = Vector2(0, 150)
+transform = Transform2D(1, 0, 0, 1, 0, 150)
+scammer_data = ExtResource("4_u5bnj")
+game_state = ExtResource("2_gcrpd")
+
+[node name="EpicScammer" parent="." instance=ExtResource("2_6kpit")]
+offset = Vector2(0, 275)
+transform = Transform2D(1, 0, 0, 1, 0, 275)
+scammer_data = ExtResource("5_3si18")
+game_state = ExtResource("2_gcrpd")
+
+[editable path="BasicScammer"]

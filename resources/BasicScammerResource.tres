@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ScammerResource" load_steps=2 format=3 uid="uid://cbrjerxa0sk2m"]
+
+[ext_resource type="Script" path="res://scripts/ScammerResourceScript.gd" id="1_wpynv"]
+
+[resource]
+script = ExtResource("1_wpynv")
+scammer_name = "Scammer"
+count = 0
+price = 10
+price_exponent = 5
+income = 1

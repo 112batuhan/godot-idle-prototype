@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="ScammerResource" load_steps=2 format=3 uid="uid://betg0x8mdq584"]
+
+[ext_resource type="Script" path="res://scripts/ScammerResourceScript.gd" id="1_6jbma"]
+
+[resource]
+script = ExtResource("1_6jbma")
+scammer_name = "Advanced Scammer"
+count = 0
+price = 200
+price_exponent = 5
+income = 10
